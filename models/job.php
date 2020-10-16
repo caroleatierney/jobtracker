@@ -85,4 +85,5 @@ class Jobs {
         }
         return $jobs;
     }
+	}
  ?>
