@@ -3,6 +3,51 @@ body {
   font-family: montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+header {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+header h1 {
+  font-family: montserrat-alternates, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5vw;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 5vw;
+  padding-top: 10px;
+  color: #00587a;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* footer */
+footer {
+  background: #00587a;
+  height: 100px;
+  position: relative;
+  padding: 15px;
+  bottom: 0;
+  color: #e7e7de;
+  padding-top: 2%;
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  min-width: 100%;
+}
+
+.made {
+  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */
