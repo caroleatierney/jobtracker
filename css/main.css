@@ -1,11 +1,16 @@
 @import url("https://use.typekit.net/wzl8ems.css");
+/* imported from adobe font */
+
+/* colors #0f3057 #00587a #008891  #e7e7de; white; black; */
+
+
 body {
   font-family: montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
   height: 100%;
   margin-bottom: 0;
-}
+} 
 
 header {
   margin-right: 5%;
