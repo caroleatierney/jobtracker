@@ -11,11 +11,11 @@ if($_REQUEST['action'] === 'index'){
     $body_object->position,
     $body_object->application_link,
     $body_object->resources_link,
-    $body_object->contact,
     $body_object->notes,
     $body_object->interest_level,
-    $body_object->interviews);
-//  print_r($new_job);
+    $body_object->interviews,
+    $body_object->add_date,);
+ // print_r($new_job);
   $all_jobs = Jobs::create($new_job);
   echo json_encode($all_jobs);
 } else if ($_REQUEST['action'] === 'update') {
@@ -25,10 +25,10 @@ if($_REQUEST['action'] === 'index'){
     $body_object->position,
     $body_object->application_link,
     $body_object->resources_link,
-    $body_object->contact,
     $body_object->notes,
     $body_object->interest_level,
-    $body_object->interviews);
+    $body_object->interviews,
+    $body_object->add_date);
   $all_jobs = Jobs::update($updated_job);
   echo json_encode($all_jobs);
 } else if ($_REQUEST['action'] === 'delete') {

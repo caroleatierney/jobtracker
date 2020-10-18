@@ -3,14 +3,13 @@
 
 /* colors #0f3057 #00587a #008891  #e7e7de; white; black; */
 
-
 body {
   font-family: montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
   height: 100%;
   margin-bottom: 0;
-} 
+}
 
 header {
   margin-right: 5%;
@@ -33,6 +32,8 @@ header h1 {
 main {
   min-height: 100%;
   margin-bottom: 0;
+  margin-right: 2%;
+  margin-left: 2%;
   position: relative;
 }
 
@@ -51,8 +52,63 @@ footer {
   min-width: 100%;
 }
 
-.made {
+.right {
   float: right;
 }
+.left {
+  float: left;
+}
 
-/*# sourceMappingURL=main.css.map */
+.joblist {
+  border: 5px #0f3057 solid;
+  border-radius: 15px;
+  margin: 2%;
+  padding: 2%;
+}
+
+h1.position {
+  color: #00587a;
+  font-family: serenity, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16pt;
+}
+
+p.added {
+  color: #00587a;
+  font-family: serenity, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+p.field {
+  color: #00587a;
+  font-family: serenity, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+a.link {
+  color: #008891;
+  font-family: serenity, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14pt;
+  overflow: auto;
+}
+
+.update-form {
+  margin-bottom: 2%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
