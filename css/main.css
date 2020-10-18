@@ -88,15 +88,37 @@ p.field {
   font-weight: 700;
   font-style: normal;
   font-size: 14pt;
+  margin-bottom: 0;
+ line-height: 5pt;
+}
+
+p.dates {
+  color: #00587a;
+  font-family: serenity, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14pt;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+p.notes {
+  color: #000;
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12pt;
+  margin-bottom: 15px;
 }
 
 a.link {
   color: #008891;
   font-family: serenity, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-size: 14pt;
   overflow: auto;
+  margin-right: 25px;
 }
 
 .update-form {
