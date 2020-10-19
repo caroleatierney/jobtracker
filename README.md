@@ -10,8 +10,9 @@ App to track job application process
   * [github](https://github.com/brandonredm)
 
 ## User Story
-- [x] As a user, I will be able to...
-- [x] As a user, I will be able to...
+- [x] As a user, I will be able to add job information to jobtracker to help organize my job search. 
+- [x] As a user, I will be able to update information in jobtracker as needed.
+- [x] As a user, I will be able to delete jobs in jobtracker when I am no longer applying to them.
 
 ### Links
 * [trello](https://trello.com/b/mtp4LqJQ/job-board)
@@ -39,11 +40,20 @@ App to track job application process
 
 ### Fails and Wins
 * Carole
-  *  Lorem Ipsum Dolor Sit Amet
+  *  Fail:  Had problems with fields not updating in the job table due to lots of sytax errors.
+  *  Win:   All front end functionality working.
+            No Github issues with team members.
 * Mimi
   *  Lorem Ipsum Dolor Sit Amet
 * Brandon
   *  Lorem Ipsum Dolor Sit Amet
+
+* Additionally, we would like each group member to answer at least one of the following questions:
+ * What went well for your group?  No Gihub issues.
+ * What was your groups biggest struggle?
+ * What was the most useful tool that your group relied on the most?
+ * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?
+
 
 
 ![ga](/img/gaLogo.png) <br>
