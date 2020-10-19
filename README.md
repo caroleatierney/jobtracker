@@ -48,6 +48,13 @@ App to track job application process
 * Brandon
   *  Lorem Ipsum Dolor Sit Amet
 
+* Additionally, we would like each group member to answer at least one of the following questions:
+ * What went well for your group?  No Gihub issues.
+ * What was your groups biggest struggle?
+ * What was the most useful tool that your group relied on the most?
+ * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?
+
+
 
 ![ga](/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!
