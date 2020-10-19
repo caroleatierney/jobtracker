@@ -9,47 +9,47 @@ class App extends React.Component {
   // ============== UPDATE event handlers ===============
     changeUpdateJobCompany = (event) => {
       this.setState({
-        updateJobCompany:event.target.placeholder
+        updateJobCompany:event.target.value
       })
     }
     changeUpdateJobPosition = (event) => {
       this.setState({
-        updateJobPosition:event.target.placeholder
+        updateJobPosition:event.target.value
       })
     }
     changeUpdateJobApplication_link = (event) => {
       this.setState({
-        updateJobApplication_link:event.target.placeholder
+        updateJobApplication_link:event.target.value
       })
     }
     changeUpdateJobResources_link = (event) => {
       this.setState({
-        updateJobResources_link:event.target.placeholder
+        updateJobResources_link:event.target.value
       })
     }
     changeUpdateJobNotes = (event) => {
       this.setState({
-        updateJobNotes:event.target.placeholder
+        updateJobNotes:event.target.value
       })
     }
     changeUpdateJobInterest_level = (event) => {
       this.setState({
-        updateJobInterest_level:event.target.placeholder
+        updateJobInterest_level:event.target.value
       })
     }
     changeUpdateJobPhoneScreen = (event) => {
       this.setState({
-        updateJobPhoneScreen:event.target.placeholder
+        updateJobPhoneScreen:event.target.value
       })
     }
     changeUpdateJobInterviews = (event) => {
       this.setState({
-        updateJobInterviews:event.target.placeholder
+        updateJobInterviews:event.target.value
       })
     }
   // ================== delete =================
   deleteJob = (event) => {
-    axios.delete('/jobs/' + event.target.placeholder).then(
+    axios.delete('/jobs/' + event.target.value).then(
       (response) => {
         this.setState(
           {
@@ -98,42 +98,42 @@ class App extends React.Component {
 // ================== NEW event handlers =================
   changeNewJobCompany = (event) => {
     this.setState({
-      newJobCompany:event.target.placeholder
+      newJobCompany:event.target.value
     })
   }
   changeNewJobPosition = (event) => {
     this.setState({
-      newJobPosition:event.target.placeholder
+      newJobPosition:event.target.value
     })
   }
   changeNewJobApplication_link = (event) => {
     this.setState({
-      newJobApplication_link:event.target.placeholder
+      newJobApplication_link:event.target.value
     })
   }
   changeNewJobResources_link = (event) => {
     this.setState({
-      newJobResources_link:event.target.placeholder
+      newJobResources_link:event.target.value
     })
   }
   changeNewJobNotes = (event) => {
     this.setState({
-      newJobNotes:event.target.placeholder
+      newJobNotes:event.target.value
     })
   }
   changeNewJobInterest_level = (event) => {
     this.setState({
-      newJobInterest_level:event.target.placeholder
+      newJobInterest_level:event.target.value
     })
   }
   changeNewJobPhoneScreen = (event) => {
     this.setState({
-      newJobPhoneScreen:event.target.placeholder
+      newJobPhoneScreen:event.target.value
     })
   }
   changeNewJobInterviews = (event) => {
     this.setState({
-      newJobInterviews:event.target.placeholder
+      newJobInterviews:event.target.value
     })
   }
 // ========= CREATE event handler ==========
@@ -173,26 +173,29 @@ class App extends React.Component {
             <li key={job.id} className="joblist">
             <h4 className="position">{job.position} at {job.company}</h4>
             <p className="added">Added: {(new Date(job.add_date)).toDateString()} </p>
-              <h6 className="link clearfix"><a href={job.application_link} target="_blank"> Application Link  <i className="fas fa-external-link-alt"></i></a></h6>
-              <h6 className="link clearfix"><a href={job.resources_link} target="_blank"> Submitted Docs  <i className="fas fa-external-link-alt"></i></a></h6>
+            <br />
+            <br />
+              <h6 className="link clearfix"><a href={job.application_link} target="_blank" className="link"> Application Link  <i className="fas fa-external-link-alt"></i></a>
+              <a href={job.resources_link} target="_blank" className="link"> Submitted Docs  <i className="fas fa-external-link-alt"></i></a></h6>
+              <br />
               <p className="field">Notes:</p>
               <p className="notes"> {job.notes}</p>
-                <p className="field">Interest Level: {job.interest_level}</p>
-             <p className="dates">Phone Sreen: {(new Date(job.phone_screen)).toDateString()}</p>
-             <p className="dates">In Person: {(new Date(job.interviews)).toDateString()}</p>
+              <p className="field">Interest Level: {job.interest_level}</p>
+             <p className="field">Phone Sreen: {(new Date(job.phone_screen)).toDateString()}</p>
+             <p className="field">In Person: {(new Date(job.interviews)).toDateString()}</p>
             <details>
-            <summary>Update Info</summary>
+            <summary>Edit Post</summary>
             <form className="update-form" id={job.id} onSubmit={this.updateJob}>
-              <input onKeyUp={this.changeUpdateJobCompany} type="text" placeholder={job.company} /><br/>
-              <input onKeyUp={this.changeUpdateJobPosition}  type="text" placeholder={job.position} /><br/>
-              <input onKeyUp={this.changeUpdateJobApplication_link} type="text" placeholder={job.application_link} /><br/>
-              <input onKeyUp={this.changeUpdateJobResources_link} type="text" placeholder={job.resources_link} /><br/>
-              <input onKeyUp={this.changeUpdateJobNotes} type="text" placeholder={job.notes} /><br/>
-              <input onKeyUp={this.changeUpdateJobInterest_level} type="number" /><br/>
-              <input onKeyUp={this.changeUpdateJobPhoneScreen} type="date" /><br/>
-              <input onKeyUp={this.changeUpdateJobInterviews} type="date" /><br/>
-              <input className="button do-it" type="submit" placeholder="Update Job" />
-              <button className="button delete right" placeholder={job.id} onClick={this.deleteJob}>
+              <input onKeyUp={this.changeUpdateJobCompany} type="text" placeholder="company" /><br/>
+              <input onKeyUp={this.changeUpdateJobPosition} type="text" placeholder="position" /><br/>
+              <input onKeyUp={this.changeUpdateJobApplication_link} type="text" placeholder="application link" /><br/>
+              <input onKeyUp={this.changeUpdateJobResources_link} type="text" placeholder="sources link" /><br/>
+              <input onKeyUp={this.changeUpdateJobNotes} type="text" placeholder="notes" /><br/>
+              <input onKeyUp={this.changeUpdateJobInterest_level} type="number" placeholder="interest level" /><br/>
+              <input onKeyUp={this.changeUpdateJobPhoneScreen} type="date" placeholder="mm/dd/yy" /><br/>
+              <input onKeyUp={this.changeUpdateJobInterviews} type="date" placeholder="mm/dd/yy" /><br/>
+              <input className="button button is-primary is-light left" type="submit" value="Update Job" />
+              <button className="button is-danger is-light right" value={job.id} onClick={this.deleteJob}>
                   Delete
               </button>
             </form>
@@ -209,11 +212,11 @@ class App extends React.Component {
         <input onKeyUp={this.changeNewJobPosition} type="text" placeholder="position" /><br/>
         <input onKeyUp={this.changeNewJobApplication_link} type="text" placeholder="application link" /><br/>
         <input onKeyUp={this.changeNewJobResources_link} type="text" placeholder="resources link" /><br/>
-        <input onKeyUp={this.changeUpdateJobNotes} type="text" placeholder="Add Some Notes" /><br/>
+        <input onKeyUp={this.changeNewJobNotes} type="text" placeholder="notes" /><br/>
         <input onKeyUp={this.changeNewJobInterest_level} type="number" placeholder="interest level" /><br/>
         <input onKeyUp={this.changeNewJobPhoneScreen} type="date" placeholder="mm/dd/yy" /><br/>
         <input onKeyUp={this.changeNewJobInterviews} type="date" placeholder="mm/dd/yy" /><br/>
-        <input type="submit" placeholder="Create Job"/>
+        <input type="submit" value="Create Job"/>
       </form>
     </div>
   )
