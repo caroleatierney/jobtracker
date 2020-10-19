@@ -58,6 +58,7 @@ summary {
   font-weight: 700;
   font-style: normal;
   font-size: 16pt;
+  outline: none;
 }
 
 .right {
@@ -74,12 +75,13 @@ summary {
   padding: 2%;
 }
 
-h1.position {
+h4.position {
   color: #00587a;
   font-family: serenity, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 16pt;
+  float: left;
 }
 
 p.added {
@@ -88,6 +90,7 @@ p.added {
   font-weight: 700;
   font-style: normal;
   font-size: 14pt;
+  float: right;
 }
 
 p.field {
@@ -118,15 +121,32 @@ p.notes {
   font-size: 12pt;
   margin-bottom: 15px;
 }
+h6.link {
+  margin-right: 25px;
+  display: block;
+  font-size: 14pt;
+  overflow: auto;
+}
 
-a.link {
+a {
   color: #008891;
   font-family: serenity, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 14pt;
-  overflow: auto;
-  margin-right: 25px;
+}
+
+.delete {
+  color: #fff;
+  background-color: indianred !important;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.do-it {
+  color: #fff;
+  background-color: forestgreen !important;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .update-form {

@@ -9,6 +9,10 @@ App to track job application process
 * Brandon Redmond
   * [github](https://github.com/brandonredm)
 
+## User Story
+- [x] As a user, I will be able to...
+- [x] As a user, I will be able to...
+
 ### Links
 * [trello](https://trello.com/b/mtp4LqJQ/job-board)
 * [Heroku](https://jobtrack-app.herokuapp.com/)
@@ -25,18 +29,13 @@ App to track job application process
 - [x] A README.md file
 
 #### Features
-
 - [x] Use a CSS framework Bulma
 - [x] Include User Stories
 - [x] Include **wireframes** that you designed during the planning process
 
-# User Story
-
-- [x] As a user, add a job
-
 ### Tech & Approaches
-* Bulma
-  * We used Bulma CSS framework
+* Materialize
+  * We used materialize CSS framework
 
 ### Fails and Wins
 * Carole

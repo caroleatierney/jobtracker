@@ -171,13 +171,10 @@ class App extends React.Component {
     <ul>
     {this.state.jobs.map(job => {return (
             <li key={job.id} className="joblist">
-            <h1 className="position left">{job.position} at {job.company}</h1>
-            <p className="right added">Added: {(new Date(job.add_date)).toDateString()} </p>
-            <br />
-            <br />
-              <p><a href={job.application_link} target="_blank" className="link"> Application Link  <i className="fas fa-external-link-alt"></i></a>
-              <a href={job.resources_link} target="_blank" className="link"> Submitted Docs  <i className="fas fa-external-link-alt"></i></a></p>
-              <br />
+            <h4 className="position">{job.position} at {job.company}</h4>
+            <p className="added">Added: {(new Date(job.add_date)).toDateString()} </p>
+              <h6 className="link clearfix"><a href={job.application_link} target="_blank"> Application Link  <i className="fas fa-external-link-alt"></i></a></h6>
+              <h6 className="link clearfix"><a href={job.resources_link} target="_blank"> Submitted Docs  <i className="fas fa-external-link-alt"></i></a></h6>
               <p className="field">Notes:</p>
               <p className="notes"> {job.notes}</p>
                 <p className="field">Interest Level: {job.interest_level}</p>
@@ -194,8 +191,8 @@ class App extends React.Component {
               <input onKeyUp={this.changeUpdateJobInterest_level} type="number" /><br/>
               <input onKeyUp={this.changeUpdateJobPhoneScreen} type="date" /><br/>
               <input onKeyUp={this.changeUpdateJobInterviews} type="date" /><br/>
-              <input className="button button is-primary is-light left" type="submit" placeholder="Update Job" />
-              <button className="button is-danger is-light right" placeholder={job.id} onClick={this.deleteJob}>
+              <input className="button do-it" type="submit" placeholder="Update Job" />
+              <button className="button delete right" placeholder={job.id} onClick={this.deleteJob}>
                   Delete
               </button>
             </form>
