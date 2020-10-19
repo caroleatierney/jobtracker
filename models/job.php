@@ -1,13 +1,13 @@
 <?php
 //for heroku configuration use command heroku pg:psql postgresql-clean-34666 --app jobtrack-app to connect in terminal
 $dbconn = null;
-if(getenv('postgres://kmtfwdxzrdfehd:3d9c7078eded57223b087b050e02b68a599004ebee734599805b3ded875c8a8e@ec2-18-211-86-133.compute-1.amazonaws.com:5432/dehs9nr7f8vfhk')){ // if using the heroku database
-	$connectionConfig = parse_url(getenv('postgres://kmtfwdxzrdfehd:3d9c7078eded57223b087b050e02b68a599004ebee734599805b3ded875c8a8e@ec2-18-211-86-133.compute-1.amazonaws.com:5432/dehs9nr7f8vfhk'));
-	$host = $connectionConfig['ec2-18-211-86-133.compute-1.amazonaws.com'];
-	$user = $connectionConfig['kmtfwdxzrdfehd'];
-	$password = $connectionConfig['3d9c7078eded57223b087b050e02b68a599004ebee734599805b3ded875c8a8e'];
-	$port = $connectionConfig['5432'];
-	$dbname = trim($connectionConfig['dehs9nr7f8vfhk'],'/');
+if(getenv('DATABASE_URL')){ // if using the heroku database
+	$connectionConfig = parse_url(getenv('DATABASE_URL'));
+	$host = $connectionConfig['host'];
+	$user = $connectionConfig['user'];
+	$password = $connectionConfig['pass'];
+	$port = $connectionConfig['port'];
+	$dbname = trim($connectionConfig['path'],'/');
 	$dbconn = pg_connect(
 		"host=".$host." ".
 		"user=".$user." ".
