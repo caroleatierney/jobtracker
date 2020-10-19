@@ -10,8 +10,9 @@ App to track job application process
   * [github](https://github.com/brandonredm)
 
 ## User Story
-- [x] As a user, I will be able to...
-- [x] As a user, I will be able to...
+- [x] As a user, I will be able to add job information to jobtracker to help organize my job search. 
+- [x] As a user, I will be able to update information in jobtracker as needed.
+- [x] As a user, I will be able to delete jobs in jobtracker when I am no longer applying to them.
 
 ### Links
 * [trello](https://trello.com/b/mtp4LqJQ/job-board)
@@ -39,7 +40,9 @@ App to track job application process
 
 ### Fails and Wins
 * Carole
-  *  Lorem Ipsum Dolor Sit Amet
+  *  Fail:  Had problems with fields not updating in the job table due to lots of sytax errors.
+  *  Win:   All front end functionality working.
+            No Github issues with team members.
 * Mimi
   *  Lorem Ipsum Dolor Sit Amet
 * Brandon
