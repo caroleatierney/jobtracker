@@ -10,7 +10,7 @@ App to track job application process
   * [github](https://github.com/brandonredm)
 
 ## User Story
-- [x] As a user, I will be able to add job information to jobtracker to help organize my job search. 
+- [x] As a user, I will be able to add job information to jobtracker to help organize my job search.
 - [x] As a user, I will be able to update information in jobtracker as needed.
 - [x] As a user, I will be able to delete jobs in jobtracker when I am no longer applying to them.
 
@@ -54,6 +54,7 @@ App to track job application process
  * What was the most useful tool that your group relied on the most?
  * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?
 
+[A Jorb Well Done!](https://www.youtube.com/watch?v=8C4ayBHTES0)
 
 
 ![ga](/img/gaLogo.png) <br>

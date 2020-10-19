@@ -1,0 +1,278 @@
+_HiStOrY_V2_
+psql
+\134q
+SELECT\040*\040FROM\040carmen;
+SELECT\040*\040FROM\040county;
+SELECT\040*\040FROM\040country;
+SELECT\040*\040FROM\040county\040ORDER\040BY\040population\040DESC;
+SELECT\040*\040FROM\040country\040ORDER\040BY\040population\040DESC;
+SELECT\040*\040FROM\040county\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040country\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040country\040ORDER\040BY\040population\040ASC\040LIMIT\04010;
+SELECT\040*\040FROM\040country\040ORDER\040BY\040population\040ASC\040LIMIT\04015;
+SELECT\040*\040FROM\040country\040WHERE\040region\040=\040'Southern\040Europe'\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040country\040WHERE\040region\040=\040'Southern\040Europe'\040ORDER\040BY\040population\040ASC\040OFFSET\0402;
+SELECT\040*\040FROM\040country\040WHERE\040region\040=\040'Southern\040Europe'\040ORDER\040BY\040population\040ASC\040LIMIT\0402;
+SELECT\040languagecountrylanguage\040FROM\040country\040WHERE\040code\040=\040'VAT';
+SELECT\040language\040FROM\040countrylanguage\040WHERE\040countrycode\040=\040'VAT'
+SELECT\040language,\040isofficial\040FROM\040countrylanguage\040WHERE\040countrycode\040=\040'VAT';
+SELECT\040countrycode\040FROM\040countrylanguage\040WHERE\040language\040=\040'Italian';
+SELECT\040countrycode,\040percentage\040FROM\040countrylanguage\040WHERE\040language\040=\040'Italian';
+SELECT\040capital\040FROM\040country\040WHERE\040code\040=\040'SMR';
+SELECT\040*\040FROM\040city\040WHERE\040countrycode\040=\040'SMR';
+SELECT\040*\040FROM\040city\040WHERE\040name\040LIKE\040'%San\040Marino%';
+SELECT\040*\040FROM\040city\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.id\040=\040county.id\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.id\040=\040country.id\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.id\040=\040contry.id\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.id\040=\040country.code\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code;
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San%';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San%'\040AND\040country.region\040=\040"South\040America";
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San%'\040AND\040country.region\040=\040'South\040America';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San\040Marino%'\040AND\040country.region\040=\040'South\040America';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San\040Marino%'\040AND\040country.region\040=\040'South\040America';
+SELECT\040*\040FROM\040city\040JOIN\040country\040ON\040city.countrycode\040=\040country.code\040WHERE\040city.name\040LIKE\040'%San\040Mar%'\040AND\040country.region\040=\040'South\040America';
+SELECT\040capital\040FROM\040country\040WHERE\040code\040=\040'ARG';
+SELECT\040*\040FROM\040city\040WHERE\040id\040=\04069\040AND\040countrycode\040=\040'ARG';
+SELECT\040*\040FROM\040country\040WHERE\040population\040=\0401084;
+SELECT\040*\040FROM\040country\040WHERE\040population\040=\04091084;
+SELECT\040*\040FROM\040country\040WHERE\040population\040<=\04091084\040ORDER\040BY\040population\040DESC;
+SELECT\040*\040FROM\040country\040WHERE\040population\040>=\04091084\040ORDER\040BY\040population\040DESC;
+SELECT\040*\040FROM\040country\040WHERE\040population\040>=\04091084\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040country\040WHERE\040population\040>=\04091000\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040country\040WHERE\040population\040>=\04090000\040ORDER\040BY\040population\040ASC;
+SELECT\040*\040FROM\040city\040WHERE\040population\040=\04091084;
+CREATE\040DATABASE\040nfl\^Ac
+CREATE\040DATABASE\040nfl\^ACREATE\040DATABASE\040nfl;\^Ac
+CREATE\040DATABASE\040nfl;
+;
+CREATE\040DATABASE\040nfl;
+-f\040nfl_seed_data/players.sql\040nfl\^A;
+-f\040nfl_seed_data/players.sql\040nfl;
+psql\040-f\040nfl_seed_data/players.sql\040nfl;
+psql\040-f\040nfl_seed_data/players.sql\040nfl\^A;
+psql\040postgres\040<\040nfl_seed_data/players.sql
+postgres\040<\040nfl_seed_data/schema.sql\^Adt
+psql\040-f\040nfl_seed_data/players.sql\040nfl\^A;
+psql\040postgres\040<\040nfl_seed_data/schema.sql
+\040-f\040nfl_seed_data/players.sql\040nfl\^A;
+exiy\^Aexit
+\040-f\040nfl_seed_data/players.sql\040nfl\^Apsql\040-f\040nfl_seed_data/players.sql\040nfl;
+\040-f\040nfl_seed_data/players.sql\040nfl\^Apsql\040-f\040nfl_seed_data/players.sql\040nfl\^Aexit
+SELECT\040*\040FROM\040players\040LIMIT\0401;
+SELECT\040*\040FROM\040players;
+SELECT\040*\040FROM\040players;
+SELECT\040*\040FROM\040teams;
+SELECT\040name\040\040FROM\040teams;
+SELECT\040stadium\040FROM\040teams;
+SELECT\040head_coach\040FROM\040teams;
+SELECT\040*\040FROM\040players\040ORDER\040BY\040is\040ASC\040LIMIT\0404;
+SELECT\040*\040FROM\040players\040ORDER\040BY\040ASC\040LIMIT\0404;
+SELECT\040*\040FROM\040players\040ORDER\040BY\040id\040ASC\040LIMIT\0404;
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'NFC\040North'\040AND\040'AFC\040East';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040'East'\040GROUP\040BY\040conference;
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040GROUP\040BY\040conference;
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040conferce\040='AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040'East'\040AND\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North',\040'East'\040AND\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040division\040=\040'East'\040AND\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040conference\040=\040'NFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'North'\040AND\040conference\040=\040'NFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'EAST'\040AND\040conf
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'EAST'\^A;
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040conference\040=\040'AFC';\^A;
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040conference\040=\040'AFC'\040AND\040division\040=\040'EAST';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040conference\040=\040'AFC'\040AND\040division\040=\040'EAST';
+SELECT\040*\040FROM\040teams;
+SELECT\040name,\040head_coach\040FROM\040teams\040LEFT\040JOIN\040teams\040ON\040teams.division\040=\040'EAST'\040WHERE\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams.division\040=\040'EAST'\040WHERE\040conference\040=\040'AFC';
+SELECT\040name,\040head_coach\040FROM\040teams\040WHERE\040division\040=\040'East'\040AND\040conference\040=\040'AFC';
+SELECT\040names,\040salary\040FROM\040players\040ORDER\040BY\040salary\040ASC;
+SELECT\040name,\040salary\040FROM\040players\040ORDER\040BY\040salary\040ASC;
+SELECT\040name,\040salary\040FROM\040players\040ORDER\040BY\040salary\040ASC\040LIMIT\0405;
+SELECT\040name,\040salary\040FROM\040players\040ORDER\040BY\040salary\040DESC\040LIMIT\0405;
+SELECT\040name\040FROM\040players\040ORDER\040BY\040salary\040DESC\040LIMIT\0405;
+SELECT\040AVG(salary)\040FROM\040players;
+SELECT\040name,\040position\040FROM\040players\040WHERE\040salary\040<=\04010_000_000;
+SELECT\040name,\040position\040FROM\040players\040WHERE\040salary\040<=\04010000000;
+SELECT\040name,\040salary\040FROM\040players\040ORDER\040BY\040salary\040DESC\040LIMIT\0401;
+SELECT\040AVG(salary)\040FROM\040players\040WHERE\040position='DE';
+\040SELECT\040name\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'Buffalo\040Bills';
+\040SELECT\040*\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'Buffalo\040Bills';
+\040SELECT\040players.name\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'Buffalo\040Bills';
+SELECT\040SUM(players.salary)\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'New\040York\040Giants';
+SELECT\040players.name\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'Green\040Bay\040Packers'\040ORDER\040BY\040players.salary\040ASC;
+SELECT\040players.name\040FROM\040players\040JOIN\040teams\040ON\040players.team_id\040=\040teams.id\040WHERE\040teams.name\040=\040'Green\040Bay\040Packers'\040ORDER\040BY\040players.salary\040ASC\040LIMIT\0401;
+CREATE\040DATABASE\040contacts;
+CREATE\040TABLE\040people\040(id\040SERIAL,\040name\040VARCHAR(16),\040age\040INT);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Matt',\04038\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Sally',\04054\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Zanthar',\0404892\040);
+SELECT\040*\040FROM\040people;
+CREATE\040DATABASE\040gifts;
+CREATE\040TABLE\040gifts\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040gift_giver\040VARCHAR(25);
+exit
+CREATE\040TABLE\040gifts\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040gift_giver\040VARCHAR(25);
+CREATE\040TABLE\040gifts\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040gift_giver\040VARCHAR(25)\040);
+INSERT\040INTO\040gifts\040(\040gift_type,\040est_value,\040event,\040gift_giver\040)\040VALUES\040(\040'Franie\040Monster\040High\040Doll',\04038,\040'Birthday',\040'Twyla'\040);
+INSERT\040INTO\040gifts\040(\040gift_type,\040est_value,\040event,\040gift_giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+drop\040table;
+CREATE\040TABLE\040present\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040gift_giver\040VARCHAR(25)\040);
+INSERT\040INTO\040present\040(\040gift_type,\040est_value,\040event,\040gift_giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+CREATE\040DATABASE\040regftr;
+CREATE\040TABLE\040given\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040gift_giver\040VARCHAR(25)\040);
+INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040gift_giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+DROP\040TABLE\040given;
+CREATE\040TABLE\040given\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040giver\040VARCHAR(25)\040);
+INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+DROP\040TABLE\040given;
+INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+CREATE\040TABLE\040given\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040giver\040VARCHAR(25)\040);
+INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Honey\040Buddah\040Chips',\0405,\040'Graduation',\040'Yoosung'\040);
+SELECT\040*\040FROM\040given\^A;
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Lucky\040Cat',\04065,\040'Graduation',\040'Bob'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Bidet',\04035,\040'Christmas',\040'Cole'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Cherry\040Speakers',\04025,\040'Birthday',\040'Kiki'\040);
+SELECT\040*\040FROM\040giver\^A;
+SELECT\040*\040FROM\040given;
+SELECT\040*\040FROM\040given;
+DROP\040TABLE\040given;
+CREATE\040TABLE\040given\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040giver\040VARCHAR(25)\040);
+SELECT\040*\040FROM\040given;
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Lucky\040Cat',\04065,\040'Graduation',\040'Bob'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Bidet',\04035,\040'Christmas',\040'Cole'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Cherry\040Speakers',\04025,\040'Birthday',\040'Kiki'\040);
+SELECT\040*\040FROM\040given;
+DROP\040TABLE\040given;
+DROP\040DATABASE\040regftr;
+CREATE\040DATABASE\040regftr;
+CREATE\040TABLE\040given\040(id\040SERIAL,\040gift_type\040VARCHAR(255),\040est_value\040INT,\040event\040VARCHAR(55),\040giver\040VARCHAR(25)\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Lucky\040Cat',\04065,\040'Graduation',\040'Bob'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Bidet',\04035,\040'Christmas',\040'Cole'\040);
+\040INSERT\040INTO\040given\040(\040gift_type,\040est_value,\040event,\040giver\040)\040VALUES\040(\040'Cherry\040Speakers',\04025,\040'Birthday',\040'Kiki'\040);
+SELECT\040*\040FROM\040given;
+SELECT\040*\040FROM\040given;
+SELECT\040*\040FROM\040given;
+SELECT\040*\040PEOPLE\^ACREATE\040TABLE\040people\040(id\040SERIAL,\040name\040VARCHAR(16),\040age\040INT);
+;
+CREATE\040TABLE\040people\040(id\040SERIAL,\040name\040VARCHAR(16),\040age\040INT);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Matt',\04038\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Sally',\04054\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Zanthar',\0404892\040);
+SELECT\040*\040PEOPLE;
+SELECT\040*\040PEOPLE\^A;
+SELECT\040*\040PEOPLE;
+SELECT\040*\040FROM\040people;
+DROP\040TABLE\040people;
+CREATE\040TABLE\040people\040(id\040SERIAL,\040name\040VARCHAR(16),\040age\040INT);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Matt',\04038\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Sally',\04054\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Zanthar',\0404892\040);
+DROP\040TABLE\040people;
+CREATE\040TABLE\040people\040(id\040SERIAL,\040name\040VARCHAR(16),\040age\040INT);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Matt',\04038\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Zanthar',\0404892\040);
+INSERT\040INTO\040people\040(\040name,\040age\040)\040VALUES\040(\040'Sally',\04054\040);
+CREATE\040TABLE\040jobs;
+DROP\040TABLE\040jobs;
+DROP\040TABLE\040jobs\^Apsql\040-l\^ACREATE\040DATABASE\040jobtracking;
+;
+DROP\040TABLE\040jobs\^Apsql\040-l;\^ACREATE\040DATABASE\040jobtracking;
+psql\040-l;
+-l;
+CREATE\040TABLE\040jobs;
+;
+CREATE\040TABLE\040jobs;
+CREATE\040TABLE\040jobs\^A;
+CREATE\040DATABASE\040jobtracker;
+CREATE\040DATABASE\040jobtracker;
+CREATE\040TABLE\040jobs;
+CREATE\040TABLE\040jobs\^A;
+CREATE\040TABLE\040jobs,\^A/d\^A/d;
+SELECT\040*\040FROM\040jobs;
+\134d\040jobs;
+DROP\040jobs;
+DROP\040TABLE\040jobs;
+CREATE\040TABLE\040jobs\040(id\040SERIAL,\040company\040VARCHAR(40),\040position\040VARCHAR(40),\040application_link\040VARCHAR(100),\040resources_link\040VARCHAR(100),\040contact\040VARCHAR(40),\040notes\040VARCHAR(200),\040interest_level\040INT,\040interviews\040VARCHAR(40));
+SELECT\040*\040FROM\040jobs;
+drop\040table\040if\040exists\040jobs;
+SET\040timezone\040=\040'America/New_York';
+SET\040LOCAL\040datestyle\040=\040'SQL,\040MDY';
+SET\040datestyle\040=\040'SQL,\040MDY';
+CREATE\040TABLE\040jobs\040(\^A\040\040id\040serial\040primary\040key,\^A\040\040company\040VARCHAR(40),\^A\040\040\040position\040VARCHAR(40),\^A\040\040\040application_link\040VARCHAR(100),\^A\040\040\040resources_link\040VARCHAR(100),\^A\040\040\040contact\040VARCHAR(40),\^A\040\040\040notes\040VARCHAR(200),\^A\040\040\040interest_level\040INT,\^A\040\040\040interviews\040DATE,\^A\040\040\040data_time\040timestamp\040NOT\040NULL\^A\040);
+INSERT\040INTO\040jobs\040(company,\040application_link,\040resources_link,\040contact,\040notes,interviews)\040VALUES\040('Draft\040Kings',\040'Front\040End\040Software\040Engineer\040check',\040'https://careers.draftkings.com/',\040'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/',\040'n/a',\040'Chris\040R.\040is\040#1\040connection\040with\040a\040lot\040of\040people\040there\040&\040Dauna\040B.\040is\040#2\040with\040Samuel\040Donnelly-Tech\040Talent\040Acquisition\040Specialist!',\0401,\040'12/01/2020');
+INSERT\040INTO\040jobs\040(company,\040application_link,\040resources_link,\040contact,\040notes,interviews)\040VALUES('Hi\040Marley',\040'Software\040Engineer\040check',\040'https://www.himarley.com/careers?gh_jid=4185487003',\040'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/'\040'n/a',\040'cannot\040locate\040contact\040-\040ok\040job\040link',\0401,\040'12/05/2020');
+INSERT\040INTO\040jobs\040(company,\040application_link,\040resources_link,\040contact,\040notes,interviews)\040VALUES\040('Draft\040Kings',\040'Front\040End\040Software\040Engineer\040check',\040'https://careers.draftkings.com/',\040'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/',\040'n/a',\040'Chris\040R.\040is\040#1\040connection\040with\040a\040lot\040of\040people\040there\040&\040Dauna\040B.\040is\040#2\040with\040Samuel\040Donnelly-Tech\040Talent\040Acquisition\040Specialist!',\0401,\040'12/01/2020');
+CREATE\040TABLE\040test_timestamp\040(\^A\040\040\040\040t1\040\040TIMESTAMP\^A);
+SET\040time_zone='+00:00';
+INSERT\040INTO\040jobs\040(company,\040application_link,\040resources_link,\040contact,\040notes,interviews)\040VALUES\040('Draft\040Kings',\040'Front\040End\040Software\040Engineer\040check',\040'https://careers.draftkings.com/',\040'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/',\040'n/a',\040'Chris\040R.\040is\040#1\040connection\040with\040a\040lot\040of\040people\040there\040&\040Dauna\040B.\040is\040#2\040with\040Samuel\040Donnelly-Tech\040Talent\040Acquisition\040Specialist!',\0401,\040'12/01/2020',\040current_timestamp);
+INSERT\040INTO\040jobs\040(company,\040position,\040application_link,\040resources_link,\040contact,\040notes,interviews)\040VALUES\040('Draft\040Kings',\040'Front\040End\040Software\040Engineer\040check',\040'https://careers.draftkings.com/',\040'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/',\040'n/a',\040'Chris\040R.\040is\040#1\040connection\040with\040a\040lot\040of\040people\040there\040&\040Dauna\040B.\040is\040#2\040with\040Samuel\040Donnelly-Tech\040Talent\040Acquisition\040Specialist!',\0401\040,\040'12/01/2020',\040current_timestamp);
+jobtracker=#\040SET\040datestyle\040=\040'SQL,\040MDY';
+\134q
+CREATE DATABASE jobtracker;
+CREATE TABLE jobs;
+\c jobtracker 
+CREATE TABLE jobs;
+\q
+drop table if exists jobs;
+SET datestyle = 'SQL, MDY';
+CREATE TABLE jobs (
+  id serial primary key,
+  company VARCHAR(40),
+   position VARCHAR(40),
+   application_link VARCHAR(100),
+   resources_link VARCHAR(100),
+   notes VARCHAR(200),
+   interest_level INT,
+   phone_screen DATE,
+   interviews DATE,
+   add_date DATE DEFAULT CURRENT_DATE
+ );
+\c jobtracker 
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES ('Draft Kings', 'Front End Software Engineer check', 'https://careers.draftkings.com/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'Chris R. is #1 connection with a lot of people there & Dauna B. is #2 with Samuel Donnelly-Tech Talent Acquisition Specialist!', 1 , '11/29/2020', '12/01/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Hi Marley', 'Software Engineer check', 'https://www.himarley.com/careers?gh_jid=4185487003', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'cannot locate contact - ok job link', 1, '12/01/2020', '12/05/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('DataDog', 'Software Engineer - Intern', 'https://www.datadoghq.com/careers/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'cannot locate contact', 1, '12/05/2020', '12/07/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Amazon', 'Sr. Software Development Manager - Aurora PostgreSQL', 'https://www.amazon.jobs/en/', 'https://www.amazon.jobs/en/jobs/1282525/sr-software-development-manager-aurora-postgresql', 'cannot locate contact', 1, '12/13/2020', '12/20/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('ezcater', 'Front End Software Engineer', 'https://www.ezcater.com/company/careers/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/edit', 'cannot locate contact', 1, '12/16/2020', '12/25/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Toast', 'Front End Software Engineer', 'https://careers.toasttab.com/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/edit', 'cannot locate contact', 1, '12/15/2020', '12/25/2020', CURRENT_DATE);
+drop table if exists jobs;
+SET datestyle = 'SQL, MDY';
+CREATE TABLE jobs (
+  id serial primary key,
+  company VARCHAR(40),
+   position VARCHAR(40),
+   application_link VARCHAR(100),
+   resources_link VARCHAR(100),
+   notes VARCHAR(200),
+   interest_level INT,
+   phone_screen DATE,
+   interviews DATE,
+   add_date DATE DEFAULT CURRENT_DATE
+ );
+drop table if exists jobs;
+SET datestyle = 'SQL, MDY';
+CREATE TABLE jobs (
+  id serial primary key,
+  company VARCHAR(40),
+   position VARCHAR(40),
+   application_link VARCHAR(100),
+   resources_link VARCHAR(100),
+   notes VARCHAR(200),
+   interest_level INT,
+   phone_screen DATE,
+   interviews DATE,
+   add_date DATE DEFAULT CURRENT_DATE
+ );
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES ('Draft Kings', 'Front End Software Engineer check', 'https://careers.draftkings.com/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'Chris R. is #1 connection with a lot of people there & Dauna B. is #2 with Samuel Donnelly-Tech Talent Acquisition Specialist!', 1 , '11/29/2020', '12/01/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Hi Marley', 'Software Engineer check', 'https://www.himarley.com/careers?gh_jid=4185487003', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'cannot locate contact - ok job link', 1, '12/01/2020', '12/05/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('DataDog', 'Software Engineer - Intern', 'https://www.datadoghq.com/careers/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/', 'cannot locate contact', 1, '12/05/2020', '12/07/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Amazon', 'Sr. Software Development Manager - Aurora PostgreSQL', 'https://www.amazon.jobs/en/', 'https://www.amazon.jobs/en/jobs/1282525/sr-software-development-manager-aurora-postgresql', 'cannot locate contact', 1, '12/13/2020', '12/20/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('ezcater', 'Front End Software Engineer', 'https://www.ezcater.com/company/careers/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/edit', 'cannot locate contact', 1, '12/16/2020', '12/25/2020', CURRENT_DATE);
+INSERT INTO jobs (company, position, application_link, resources_link, notes, interest_level, phone_screen, interviews, add_date) VALUES('Toast', 'Front End Software Engineer', 'https://careers.toasttab.com/', 'https://docs.google.com/document/d/1nfGYU5H1XJy7oAaX-HdfcYU2VweyXgSWneEfk1cYNWY/edit', 'cannot locate contact', 1, '12/15/2020', '12/25/2020', CURRENT_DATE);
+/d jobs
+\s jobs

@@ -8,13 +8,19 @@ body {
   font-weight: 400;
   font-style: normal;
   height: 100%;
-  margin-bottom: 0;
+  margin-top: 15%;
 }
 
 header {
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-bottom: 0;
+  display: block;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-bottom: 50px;
+  width: 100%;
+  background: rgb(15,48,87);
+  background: linear-gradient(81deg, rgba(15,48,87,1) 0%, rgba(0,88,122,1) 44%, rgba(0,136,145,1) 80%);
 }
 
 header h1 {
@@ -25,8 +31,7 @@ header h1 {
   margin-bottom: 0;
   text-align: center;
   font-size: 5vw;
-  padding-top: 10px;
-  color: #00587a;
+  color: #fff;
 }
 
 main {
@@ -39,7 +44,8 @@ main {
 
 /* footer */
 footer {
-  background: #00587a;
+  background: rgb(15,48,87);
+  background: linear-gradient(81deg, rgba(15,48,87,1) 0%, rgba(0,88,122,1) 44%, rgba(0,136,145,1) 80%);
   height: 100px;
   position: relative;
   padding: 15px;
@@ -59,6 +65,7 @@ summary {
   font-style: normal;
   font-size: 16pt;
   outline: none;
+  margin-top: 25px;
 }
 
 .right {
@@ -123,6 +130,7 @@ p.notes {
 }
 h6.link {
   margin-right: 25px;
+  margin-top: 25px;
   display: block;
   font-size: 14pt;
   overflow: auto;
@@ -162,3 +170,49 @@ a {
   clear: both;
   display: table;
 }
+
+/* form */
+label {
+  font-size: 1rem !important;
+  margin-top: 5px !important;
+  color: #402626 !important;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+form.add-job {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+
+input.post-btn {
+  background-color:#00587a !important;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  min-width: 100px;
+  margin-top: 25px;
+  min-width: 100%;
+}
+
+details.track{
+  margin-top: 2%;
+}
+summary.track{
+  font-family: montserrat-alternates, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2vw;
+  padding-top: 10px;
+  color: #078766;
+}
+
+.interviews {
+    margin-right: 50%;
+    margin-top: 15px;
+}
+
+/* colors #0f3057 #00587a #008891  #e7e7de; white; black; #078766 */

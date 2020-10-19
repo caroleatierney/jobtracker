@@ -1,7 +1,6 @@
 <?php
-//for heroku configuration use command heroku pg:psql postgresql-clean-34666 --app jobtrack-app to connect in terminal
 $dbconn = null;
-if(getenv('DATABASE_URL')){ // if using the heroku database
+if(getenv('DATABASE_URL')){
 	$connectionConfig = parse_url(getenv('DATABASE_URL'));
 	$host = $connectionConfig['host'];
 	$user = $connectionConfig['user'];
@@ -15,7 +14,7 @@ if(getenv('DATABASE_URL')){ // if using the heroku database
 		"port=".$port." ".
 		"dbname=".$dbname
 	);
-} else { 
+} else {
 	$dbconn = pg_connect("host=localhost dbname=jobtracker");
 }
 
@@ -52,8 +51,8 @@ class Jobs {
       return self::all();
     }
     static function update($updated_job) {
-      $query = "UPDATE jobs SET company = $1, position = $2, application_link = $3, resources_link = $4, notes = $5, interest_level = $6, phone_screen=$7, interviews = $8 WHERE id = $9";
-      $query_params = array($updated_job->company, $updated_job->position, $updated_job->application_link, $updated_job->resources_link, $updated_job->notes, $updated_job->interest_level, $updated_job->phone_screen, $updated_job->interviews, $updated_job->id);
+      $query = "UPDATE jobs SET company = $1, position = $2, application_link = $3, resources_link = $4, notes = $5, interest_level = $6, phone_screen=$7, interviews = $8, add_date = $9 WHERE id = $10";
+      $query_params = array($updated_job->company, $updated_job->position, $updated_job->application_link, $updated_job->resources_link, $updated_job->notes, $updated_job->interest_level, $updated_job->phone_screen, $updated_job->interviews, $updated_job->add_date, $updated_job->id);
       pg_query_params($query, $query_params);
       return self::all();
     }
@@ -76,10 +75,10 @@ class Jobs {
 								$row_object->application_link,
 								$row_object->resources_link,
 								$row_object->notes,
-								$row_object->interest_level,
-								$row_object->phone_screen,
-								$row_object->interviews,
-								$row_object->add_date,
+								intval($row_object->interest_level),
+								date($row_object->phone_screen),
+								date($row_object->interviews),
+								date($row_object->add_date),
             );
             $jobs[] = $new_job;
             $row_object = pg_fetch_object($results);

@@ -167,61 +167,101 @@ class App extends React.Component {
   // ================== render =================
   render = () => {
     return ( <div>
-    <h2>Your Jobs</h2>
-    <ul>
-    {this.state.jobs.map(job => {return (
-            <li key={job.id} className="joblist">
-            <h4 className="position">{job.position} at {job.company}</h4>
-            <p className="added">Added: {(new Date(job.add_date)).toDateString()} </p>
-            <br />
-            <br />
-              <h6 className="link clearfix"><a href={job.application_link} target="_blank" className="link"> Application Link  <i className="fas fa-external-link-alt"></i></a>
-              <a href={job.resources_link} target="_blank" className="link"> Submitted Docs  <i className="fas fa-external-link-alt"></i></a></h6>
-              <br />
-              <p className="field">Notes:</p>
-              <p className="notes"> {job.notes}</p>
-              <p className="field">Interest Level: {job.interest_level}</p>
-             <p className="field">Phone Sreen: {(new Date(job.phone_screen)).toDateString()}</p>
-             <p className="field">In Person: {(new Date(job.interviews)).toDateString()}</p>
-            <details>
+      <details className="track">
+        <summary className="track">Track a Job</summary>
+        <div className="row">
+          <form className="col s12 add-job" onSubmit={this.createJob}>
+            <div className="row">
+              <div className="input-field col s5">
+                <input onKeyUp={this.changeNewJobCompany} type="text" /><br />
+                <label htmlFor="company">Company Name</label>
+              </div>
+              <div className="input-field col s5">
+                <input onKeyUp={this.changeNewJobPosition} type="text" /><br />
+                <label htmlFor="position">Position Title</label>
+              </div>
+              <div className="input-field col s2">
+                <input onKeyUp={this.changeNewJobInterest_level} type="number" min="0" max="10" /><br />
+                <label htmlFor="notes">Interest Level 1-10</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                <input onKeyUp={this.changeNewJobApplication_link} type="text" /><br />
+                <label htmlFor="application">Link to Application</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                <input onKeyUp={this.changeNewJobResources_link} type="text" /><br />
+                <label htmlFor="docs">Link to Submitted Docs</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                <input onKeyUp={this.changeNewJobNotes} type="text" /><br />
+                <label htmlFor="notes">Notes</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className=" col s6">
+                <label htmlFor="phone">Phone Screen Date</label>
+                <input onKeyUp={this.changeNewJobPhoneScreen} type="date" /><br />
+              </div>
+              <div className=" col s6">
+                <label htmlFor="interviews">In person Date</label>
+                <input onKeyUp={this.changeNewJobInterviews} type="date" /><br />
+              </div>
+            </div>
+            <input className="post-btn" type="submit" value="Tack Job" />
+          </form>
+        </div>
+      </details>
+      <h2>Your Jobs</h2>
+      <ul>
+        {this.state.jobs.map(job => {return (
+        <li key={job.id} className="joblist">
+          <h4 className="position">{job.position} at {job.company}</h4>
+          <p className="added">Added: {(new Date(job.add_date)).toDateString()} </p>
+          <br />
+          <br />
+          <h6 className="link clearfix"><a href={job.application_link} target="_blank" className="link"> Application Link &nbsp;<i className="fas fa-external-link-alt"></i>&nbsp;&nbsp;</a>
+            <a href={job.resources_link} target="_blank" className="link"> Submitted Docs&nbsp; <i className="fas fa-external-link-alt"></i></a></h6>
+          <br />
+          <p className="field">Notes:</p>
+          <p className="notes"> {job.notes}</p>
+          <p className="field">Interest Level: {job.interest_level}</p>
+          <div className="interviews">
+          <p className="field left">  <i className="fas fa-phone-square-alt"></i>&nbsp; Phone Sreen: {(new Date(job.phone_screen)).toDateString()}</p>
+          <p className="field right"><i className="fas fa-handshake"></i> &nbsp; In Person: {(new Date(job.interviews)).toDateString()}</p><br /> <br />
+          </div>
+          <details>
             <summary>Edit Post</summary>
             <form className="update-form" id={job.id} onSubmit={this.updateJob}>
-              <input onKeyUp={this.changeUpdateJobCompany} type="text" placeholder="company" /><br/>
-              <input onKeyUp={this.changeUpdateJobPosition} type="text" placeholder="position" /><br/>
-              <input onKeyUp={this.changeUpdateJobApplication_link} type="text" placeholder="application link" /><br/>
-              <input onKeyUp={this.changeUpdateJobResources_link} type="text" placeholder="sources link" /><br/>
-              <input onKeyUp={this.changeUpdateJobNotes} type="text" placeholder="notes" /><br/>
-              <input onKeyUp={this.changeUpdateJobInterest_level} type="number" placeholder="interest level" /><br/>
-              <input onKeyUp={this.changeUpdateJobPhoneScreen} type="date" placeholder="mm/dd/yy" /><br/>
-              <input onKeyUp={this.changeUpdateJobInterviews} type="date" placeholder="mm/dd/yy" /><br/>
-              <input className="button button is-primary is-light left" type="submit" value="Update Job" />
-              <button className="button is-danger is-light right" value={job.id} onClick={this.deleteJob}>
-                  Delete
+              <input onKeyUp={this.changeUpdateJobCompany} type="text" placeholder={job.company} /><br />
+              <input onKeyUp={this.changeUpdateJobPosition} type="text" placeholder={job.position} /><br />
+              <input onKeyUp={this.changeUpdateJobApplication_link} type="text" placeholder={job.application_link} /><br />
+              <input onKeyUp={this.changeUpdateJobResources_link} type="text" placeholder={job.resources_link} /><br />
+              <input onKeyUp={this.changeUpdateJobNotes} type="text" placeholder={job.notes} /><br />
+              <input onKeyUp={this.changeUpdateJobInterest_level} type="number" placeholder="interest level" /><br />
+              <input onKeyUp={this.changeUpdateJobPhoneScreen} type="date" /><br />
+              <input onKeyUp={this.changeUpdateJobInterviews} type="date" /><br />
+              <input className="button do-it" type="submit" value="Update Job" />
+              <button className="button delete right" value={job.id} onClick={this.deleteJob}>
+                Delete
               </button>
             </form>
-              </details> <br />
-          </li>
-          )
+          </details> <br />
+        </li>
+        )
         }
+        )
+        }
+      </ul>
+      </div>
       )
-    }
-    </ul>
-      <h2>Create Job</h2>
-      <form onSubmit={this.createJob}>
-        <input onKeyUp={this.changeNewJobCompany} type="text" placeholder="company" /><br/>
-        <input onKeyUp={this.changeNewJobPosition} type="text" placeholder="position" /><br/>
-        <input onKeyUp={this.changeNewJobApplication_link} type="text" placeholder="application link" /><br/>
-        <input onKeyUp={this.changeNewJobResources_link} type="text" placeholder="resources link" /><br/>
-        <input onKeyUp={this.changeNewJobNotes} type="text" placeholder="notes" /><br/>
-        <input onKeyUp={this.changeNewJobInterest_level} type="number" placeholder="interest level" /><br/>
-        <input onKeyUp={this.changeNewJobPhoneScreen} type="date" placeholder="mm/dd/yy" /><br/>
-        <input onKeyUp={this.changeNewJobInterviews} type="date" placeholder="mm/dd/yy" /><br/>
-        <input type="submit" value="Create Job"/>
-      </form>
-    </div>
-  )
-  }
-}
+      }
+      }
 
 // ======= render to DOM Main ============
 
