@@ -49,11 +49,11 @@ App to track job application process
   * Struggles: I had a few bugs trying to get the CRUD routes working. I consulted google and got the php files set up.
   * Win: Getting the initial php files set up.
 
-* Additionally, we would like each group member to answer at least one of the following questions:
+## Additionally, we would like each group member to answer at least one of the following questions:
  * What went well for your group?  No Github issues.
  * What was your groups biggest struggle? - We had some issues getting the app to work in heroku. Mimi did a great job of figuring out the issue. 
  * What was the most useful tool that your group relied on the most? - We were able to easily pull each others changes from github. It made collaboration pretty seamless. 
- * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?
+ * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?  That we had no issues!
 
 
 
