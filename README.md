@@ -40,18 +40,19 @@ App to track job application process
 
 ### Fails and Wins
 * Carole
-  *  Fail:  Had problems with fields not updating in the job table due to lots of sytax errors.
+  *  Fail:  Had problems with fields not updating in the job table due to lots of syntax errors.
   *  Win:   All front end functionality working.
             No Github issues with team members.
 * Mimi
   *  Lorem Ipsum Dolor Sit Amet
 * Brandon
-  *  Lorem Ipsum Dolor Sit Amet
+  * Struggles: I had a few bugs trying to get the CRUD routes working. I consulted google and got the php files set up.
+  * Win: Getting the initial php files set up.
 
 * Additionally, we would like each group member to answer at least one of the following questions:
- * What went well for your group?  No Gihub issues.
- * What was your groups biggest struggle?
- * What was the most useful tool that your group relied on the most?
+ * What went well for your group?  No Github issues.
+ * What was your groups biggest struggle? - We had some issues getting the app to work in heroku. Mimi did a great job of figuring out the issue. 
+ * What was the most useful tool that your group relied on the most? - We were able to easily pull others changes from github. It made collaboration pretty seamless. 
  * What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate?
 
 
