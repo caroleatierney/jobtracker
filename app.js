@@ -180,7 +180,7 @@ class App extends React.Component {
               <br />
               <p className="field">Notes:</p>
               <p className="notes"> {job.notes}</p>
-                <p className="field">Interest Level: {job.interest_level}</p> 
+                <p className="field">Interest Level: {job.interest_level}</p>
              <p className="dates">Phone Sreen: {(new Date(job.phone_screen)).toDateString()}</p>
              <p className="dates">In Person: {(new Date(job.interviews)).toDateString()}</p>
             <details>
