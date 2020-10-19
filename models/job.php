@@ -18,7 +18,6 @@ if(getenv('postgres://kmtfwdxzrdfehd:3d9c7078eded57223b087b050e02b68a599004ebee7
 } else { // if using the local database, change the dbname to be whatever your local database's name is
 	$dbconn = pg_connect("host=localhost dbname=jobtracker");
 }
-
 $dbconn = pg_connect("host=localhost dbname=jobtracker");
 class Job {
     public $id;
