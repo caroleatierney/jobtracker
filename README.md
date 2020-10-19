@@ -10,12 +10,10 @@ App to track job application process
   * [github](https://github.com/brandonredm)
 
 ### Links
-
-[trello](https://trello.com/b/J8GjWSDb/code-fatale)
-[Heroku](https://jobtrack-app.herokuapp.com/)
+* [trello](https://trello.com/b/mtp4LqJQ/job-board)
+* [Heroku](https://jobtrack-app.herokuapp.com/)
 
 #### MVP - Minimum Viable Product
-
 - [x] PHP backend
 - [x] Must have at least one model with full CRUD
 - [x] React frontend
@@ -23,7 +21,7 @@ App to track job application process
 - [x] Deploy online to [Heroku](https://jobtrack-app.herokuapp.com/)
 - [x] Must be hosted on Github with frequent commits dating back to the very beginning of the project
 - [x] At least one Github commit per day per member
-- [x] A daily tracker that all group members use [trello](https://trello.com/b/J8GjWSDb/code-fatale)
+- [x] A daily tracker that all group members use [https://trello.com/b/mtp4LqJQ/job-board)
 - [x] A README.md file
 
 #### Features
@@ -35,6 +33,19 @@ App to track job application process
 # User Story
 
 - [x] As a user, add a job
+
+### Tech & Approaches
+* Bulma
+  * We used Bulma CSS framework
+
+### Fails and Wins
+* Carole
+  *  Lorem Ipsum Dolor Sit Amet
+* Mimi
+  *  Lorem Ipsum Dolor Sit Amet
+* Brandon
+  *  Lorem Ipsum Dolor Sit Amet
+
 
 ![ga](/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!
