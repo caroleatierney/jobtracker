@@ -15,7 +15,7 @@ if(getenv('postgres://kmtfwdxzrdfehd:3d9c7078eded57223b087b050e02b68a599004ebee7
 		"port=".$port." ".
 		"dbname=".$dbname
 	);
-} else { // if using the local database, change the dbname to be whatever your local database's name is
+} else { 
 	$dbconn = pg_connect("host=localhost dbname=jobtracker");
 }
 
