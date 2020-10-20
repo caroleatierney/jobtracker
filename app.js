@@ -217,7 +217,7 @@ class App extends React.Component {
           </form>
         </div>
       </details>
-      <h2>Your Jobs</h2>
+      <h2 className="your-jobs">Your Jobs</h2>
       <ul>
         {this.state.jobs.map(job => {return (
         <li key={job.id} className="joblist">

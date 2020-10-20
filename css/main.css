@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   font-style: normal;
   height: 100%;
-  margin-top: 15%;
+  margin-top: 150px;
 }
 
 header {
@@ -27,25 +27,24 @@ header h1 {
   font-family: montserrat-alternates, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 34pt;
   margin-bottom: 0;
   text-align: center;
-  font-size: 5vw;
   color: #fff;
 }
 
 main {
   min-height: 100%;
   margin-bottom: 0;
-  margin-right: 2%;
-  margin-left: 2%;
+  margin-right: 3%;
+  margin-left: 3%;
   position: relative;
 }
 
 /* footer */
 footer {
   background: rgb(15,48,87);
-  background: linear-gradient(81deg, rgba(15,48,87,1) 0%, rgba(0,88,122,1) 44%, rgba(0,136,145,1) 80%);
+  background: linear-gradient(-81deg, rgba(15,48,87,1) 0%, rgba(0,88,122,1) 44%, rgba(0,136,145,1) 80%);
   height: 100px;
   position: relative;
   padding: 15px;
@@ -79,7 +78,9 @@ summary {
   border: 5px #0f3057 solid;
   border-radius: 15px;
   margin: 2%;
+  margin-bottom: 4%;
   padding: 2%;
+  box-shadow: 15px 10px #1e76875e;
 }
 
 h4.position {
@@ -205,14 +206,23 @@ summary.track{
   font-style: normal;
   margin-bottom: 0;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
   padding-top: 10px;
+  margin-top: 6%;
   color: #078766;
 }
 
 .interviews {
-    margin-right: 50%;
+    margin-right: 25%;
     margin-top: 15px;
+}
+
+a.foot {
+  color: #fff;
+}
+
+h2.your-jobs {
+  font-size: 3vw;
 }
 
 /* colors #0f3057 #00587a #008891  #e7e7de; white; black; #078766 */
