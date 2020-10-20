@@ -26,11 +26,11 @@ App to track job application process
 - [x] Deploy online to [Heroku](https://jobtrack-app.herokuapp.com/)
 - [x] Must be hosted on Github with frequent commits dating back to the very beginning of the project
 - [x] At least one Github commit per day per member
-- [x] A daily tracker that all group members use [https://trello.com/b/mtp4LqJQ/job-board)
+- [x] A daily tracker that all group members use  [trello](https://trello.com/b/mtp4LqJQ/job-board)
 - [x] A README.md file
 
 #### Features
-- [x] Use a CSS framework Bulma
+- [x] Use a CSS framework Materialize
 - [x] Include User Stories
 - [x] Include **wireframes** that you designed during the planning process
 
